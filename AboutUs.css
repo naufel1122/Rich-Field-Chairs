@@ -1,0 +1,281 @@
+/* GOOGLE FONTS */
+*{
+    font-family: 'Dosis', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+/* NEW NAV BAR */
+#navbar {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .navbar {
+    line-height: 30px;
+    background-color: #232323ab;
+    transition-duration: 0.5s;
+  }
+  .navbar-nav .nav-link {
+    color: #a68037;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #9f7a35;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffcf58;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    color: #ffcf58;
+    width: 100%;
+  }
+  
+  .svg-card a {
+    text-decoration: none;
+    color: #9f7a35;
+    transition-duration: 1.2s;
+  }
+  .svg-card a:hover {
+    color: #8b6c31;
+  }
+  
+  /* NAVBAR WORK ENDS HERE */
+  /* HEADER WORK START HERE */
+header {
+    background-image: linear-gradient(rgba(4, 9, 10, 0.6), rgba(4, 9, 30, 0.3)),
+      url("./images/about\ us\ medium.jpg");
+    height: 70vh;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    text-align: center;
+    color: #fff8f8;
+    font-family: serif;
+  }
+  .header h1 {
+    text-shadow: 0px 10px 20px black;
+    /* font-size: 45px; */
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: serif;
+    text-align: center;
+  }
+  .header h3 {
+    text-shadow: 0px 10px 20px black;
+    /* font-size:32px ; */
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: serif;
+    text-align: center;
+  }
+  .header button {
+    /* width: 90%; */
+    color: #fff;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: serif;
+    text-align: center;
+    /* display: inline-block; */
+    text-decoration: none;
+  }
+  .header #navbar {
+    text-align: center;
+    font-weight: bold;
+  }
+  /* HEADER WORK ENDS HERE */
+  
+  .main{
+    height: 400px;
+    width: 650px;
+    font-size: 20px;
+  }
+  .main-btn{
+    text-decoration:none;
+    font-weight: bold;
+    /* color:#2e2e2e; */
+    border: 2px solid #a68037;
+    height: 50px;
+    background-color: transparent;  
+}
+.main-btn a{
+  text-decoration: none;
+  color: #2e2e2e;
+}
+  .main-btn:hover{
+    background-color: rgb(148, 151, 154);
+    transition-duration: 0.5s;
+  }
+  .second-main{
+    height: 300px;
+    width: 650px;
+  }
+  .cities{
+    text-align: center;
+  }
+  .maps{
+    text-align: center;
+  }
+
+  .third{
+    text-align: center;
+  }
+  .card{
+    background-color: #2a2a2a6e;
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 0 10px 10px 10px gray;
+    padding: 15px;
+  }
+  .card img{
+    border-radius: 10px;
+  }
+  .card h5{
+    color: white;
+  }
+  .card-body{
+    text-align: center;
+    height: 125px;
+    border-radius: 0 0 10px 10px;
+  }
+  .third-image-1{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+
+  }
+  .third-image-2{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+  }
+  .third-image-3{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+  }
+  .about-us{
+    text-align: center;
+    font-weight: bold
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  /* body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1A1D24;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+  } */
+
+  /* ======================== */
+  .icons {
+      display: flex;
+      column-gap: 25px;
+  }
+
+  .icon {
+      display: inline-flex;
+      width: 60px;
+      height: 50px;
+      text-decoration: none;
+      font-size: 26px;
+      color: #fff;
+      border-radius: 50%;
+      outline: 2px solid #fff;
+      transition-property: outline-offset, outline-color, background-color;
+      transition-duration: 0.25s;
+  }
+
+  .icon:hover {
+      outline-offset: 4px;
+  }
+
+  .icon i {
+      margin: auto;
+  }
+
+  .icon:hover i {
+      animation: shake 0.25s;
+  }
+
+  .icon--instagram:hover {
+      background-image: radial-gradient(circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%);
+      outline-color: #a02d76;
+  }
+
+  .icon--twitter:hover {
+      background-color: #1da1f2;
+      outline-color: #1da1f2;
+  }
+
+  .icon--linkedin:hover {
+      background-color: #0077b5;
+      outline-color: #0077b5;
+  }
+
+   .icon--github:hover {
+      background-color: #2ea44f;
+      outline-color: #2ea44f;
+  } 
+
+  /* .icon--github:hover {
+      background-color: #24292f;
+      outline-color: #fff;
+  } */
+  @keyframes shake {
+      10% {
+          transform: rotate(15deg);
+      }
+
+      20% {
+          transform: rotate(-15deg);
+      }
+
+      30% {
+          transform: rotate(15deg);
+      }
+
+      40% {
+          transform: rotate(-15deg);
+      }
+  }
+  /* CARDS NAME */
+  

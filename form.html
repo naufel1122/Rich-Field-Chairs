@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Rich Field Chair</title>
+    <link rel="website icon" type="jpeg" href="./images/logo with background(1).jpeg">
+
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        /* background-image: url(./images/logo2.png); */
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background: linear-gradient(grey, lightskyblue); */
+        /* background-color: #222222; */
+        /* background-image: url(https://images.pexels.com/photos/15062131/pexels-photo-15062131.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load); */
+        background-image: url(./images/dutch-shooter-kqQm0r2uugs-unsplash.jpg);
+    }
+
+    #navbar {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        line-height: 30px;
+        background-color: #56555580;
+        transition-duration: 0.5s;
+    }
+
+    .navbar-nav .nav-link {
+        /* color: #282828; */
+        color: #a68037;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 30px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #756039;
+        transition: all 1.2s;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #ffcf58;
+        display: block;
+        margin: auto;
+        transition: 0.7s;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        color: #ffcf58;
+        width: 100%;
+    }
+
+    .svg-card a {
+        text-decoration: none;
+        color: #9f7a35;
+        transition-duration: 1.2s;
+    }
+
+    .svg-card a:hover {
+        color: #756039;
+        transition: all 1.2s;
+    }
+
+    .Register {
+        max-width: 850px;
+        padding: 20px;
+        margin: 0%;
+        border-radius: 20px;
+        overflow: hidden;
+        /* background-image: url(./images/logo\ with\ background.jpeg); */
+        background-repeat: no-repeat;
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+        position: absolute;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        padding-bottom: 8px;
+        border-bottom: 1px solid silver;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    .input-box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        padding-bottom: 15px;
+    }
+
+    .input-box:nth-child(2n) {
+        justify-content: end;
+    }
+
+    .input-box label,
+    .gender-title {
+        width: 95%;
+        color: white;
+        font-weight: bold;
+        margin: 5px 0px;
+    }
+
+    .gender-title {
+        font-size: 16px;
+    }
+
+    .gender-category {
+        color: #fff;
+    }
+
+    .alert {
+        color: #fff;
+    }
+
+    .input-box input {
+        height: 40px;
+        width: 90%;
+        padding: 0 10%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+
+
+    }
+
+    .button {
+        height: 75px;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        outline: 2px solid #7b847f;
+        padding: 30px 60px;
+        overflow: hidden;
+        transition: color 2.5s;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 4px 4px 4px gray;
+    }
+
+    .button:hover {
+        color: #090909;
+
+    }
+
+    .button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px;
+        z-index: -1;
+        width: 150%;
+        height: 100%;
+        background-color: #666666a6;
+        transform: scaleX(0) skewX(90deg);
+        transform-origin: left;
+        transition: transform 1.8s;
+    }
+
+    .button:hover::before {
+        transform: scaleX(1) skewX(35deg);
+    }
+
+    /* .but {
+        margin: 15px 0;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        display: block;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 10px;
+        background-image: linear-gradient(#aa076b, #61045f);
+    }
+
+    .but:hover {
+        background-image: linear-gradient(to right, #61045f, #aa076b);
+        transition: 4s;
+    } */
+
+    span {
+        color: red;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  fixed-top" id="navbar">
+        <div class="container">
+            <img class="nav-brand" height="120px" src="./images/logo2.png" alt="">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./huzaifa.html">LUXURY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Gaming.html">GAMING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./officefile.html">OFFICE </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./study.html" tabindex="-1" aria-disabled="true">STUDY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./khallad file.html" tabindex="-1" aria-disabled="true">HOUSE
+                            FIELD</a>
+                    </li>
+                </ul>
+                </ul>
+                <div class="svg-card">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </a>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-cart3 " id="svg-card" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg></a>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container Register ">
+        <form onsubmit="return validation()">
+            <h1> REGISTRATION</h1>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name"> Your Name</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" name="name">
+                    <span id="YourName"></span>
+                </div>
+                <div class="input-box">
+                    <label for="name"> Father Name</label>
+                    <input id="user" type="text" placeholder="Father Name" name="uname">
+                    <span id="username"></span>
+                </div>
+                <div class="input-box">
+                    <label for="email"> Email</label>
+                    <input id="mail" type="email" placeholder="Email" name="Email">
+                    <span id="email"></span>
+                </div>
+                <div class="input-box">
+                    <label for="name">Phone Number </label>
+                    <input id="mob" type="number" placeholder="Phone Number" name="Phone Number">
+                    <span id="phne"></span>
+                </div>
+                <div class="input-box">
+                    <label for="name"> Password</label>
+                    <input id="pass" type="Password" placeholder="Password" name="Password">
+                    <span id="pwd"></span>
+                </div>
+                <div class="input-box">
+                    <label for="name"> Confirm Password</label>
+                    <input id="cpass" type="Password" placeholder="Confirm Password" name="Confirm Password">
+                    <span id="cpwd"></span>
+                </div>
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="Female">
+                    <label for="Female">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="Other">other<label>
+                </div>
+            </div>
+            <div class="alert">
+                <p>
+                    by clicking sign up, you agree to our <a href="#"> Terms</a><a href="#"> Privacy Policy</a>. You my
+                    receive
+                    sms notification from us and get OTP out at mt time.
+                </p>
+                <!-- <button class="but">
+                    Register
+                </button> -->
+                <div style="padding: 1rem;">
+                    <a href="#" class="button" value="calculate" onclick='calculate()'>Get Result</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validation() {
+            var name = document.getElementById("name");
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var cpass = document.getElementById("cpass").value;
+            var mob = document.getElementById("mob").value;
+            var mail = document.getElementById("mail").value;
+
+            // NAME VALIDATION
+            // if (ppp == "") {
+            //     document.getElementById("ppps").innerHTML = "**Please Enter Your Name"
+            //     return false
+            // }
+            // else {
+            //     document.getElementById("ppps").innerHTML = null;
+            // }
+            // if (ppp.length < 2 ||ppp.length > 20) {
+            //     document.getElementById("ppps").innerHTML = "**Username must be between 2 to 20 Characters"
+            //     return false
+            // }
+            // else {
+            //     document.getElementById("ppps").innerHTML = null;
+            // }
+            // if (!isNaN(ppp)) {
+            //     document.getElementById("ppps").innerHTML = "**Numbers are not allowed"
+            //     return false
+            // }
+            // else {
+            //     document.getElementById("ppps").innerHTML = null;
+            // }
+            if (name == "") {
+                document.getElementById("YourName").innerHTML =
+                    "**Please fill in the Father Name field";
+                return false;
+            }
+            if (name.length < 2 || name.length > 20) {
+                document.getElementById("YourName").innerHTML =
+                    "**Characters must be between 2 to 20";
+                return false;
+            }
+            if (!isNaN(name)) {
+                document.getElementById("YourName").innerHTML =
+                    "Digits are not allowed";
+                return false;
+            }
+
+
+            // USERNAME VALIDATION
+            if (user == "") {
+                document.getElementById("username").innerHTML =
+                    "**Please fill in the Father Name field";
+                return false;
+            } else {
+                document.getElementById("username").innerHTML = null;
+            }
+            if (user.length < 2 || user.length > 20) {
+                document.getElementById("username").innerHTML =
+                    "**Characters must be between 2 to 20";
+                return false;
+            } else {
+                document.getElementById("username").innerHTML = null;
+            }
+            if (!isNaN(user)) {
+                document.getElementById("username").innerHTML =
+                    "Digits are not allowed";
+                return false;
+            } else {
+                document.getElementById("username").innerHTML = null;
+            }
+            // EMAIL VALIDATION
+
+            if (mail == "") {
+                document.getElementById("email").innerHTML =
+                    "**Please Enter Your Email Id";
+                return false;
+            }
+            else {
+                document.getElementById("email").innerHTML = null;
+            }
+
+            // MOBILE NO VALIDATION
+
+            if (mob == "") {
+                document.getElementById("phne").innerHTML =
+                    "**Please Enter your Contact Number ";
+                return false;
+            } else {
+                document.getElementById("phne").innerHTML = null;
+            }
+            if (mob.length < 11 || mob.length > 11) {
+                document.getElementById("phne").innerHTML =
+                    "**Contact number contain 11 digits only";
+                return false;
+            } else {
+                document.getElementById("phne").innerHTML = null;
+            }
+
+
+            // PASSWORD VALIDATION
+
+            if (pass == "") {
+                document.getElementById("pwd").innerHTML =
+                    "**Please fill in the Password feild";
+                return false;
+            }
+            if (pass.length < 7) {
+                document.getElementById("pwd").innerHTML =
+                    "**Password contain atleast 7 characters";
+                return false;
+            }
+            //CONFIRM PASSWORD VALIDATION
+
+            if (cpass == "") {
+                document.getElementById("cpwd").innerHTML =
+                    "**Please fill the Confirm Password feild";
+                return false;
+            }
+            if (pass != cpass) {
+                document.getElementById("cpwd").innerHTML =
+                    "**Please Enter Same Password to Confirm ";
+                return false;
+            }
+
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
